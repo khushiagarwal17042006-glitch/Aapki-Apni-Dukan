@@ -1,0 +1,172 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #f5f5f5;
+}
+
+/* Header */
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: linear-gradient(135deg, #2c3e50, #4ca1af);
+color: white;
+padding: 25px 20px;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+h1 {
+margin: 0;
+}
+
+/* Heading styles */
+.hindi {
+font-family:cursive;
+color: #f1b708;
+}
+
+.english {
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: #ffffff;
+font-weight: bold;
+}
+
+.divider {
+font-size: 25px;
+margin: 0 5px;
+}
+
+/* Cart */
+.cart {
+font-size: 18px;
+background: rgba(255,255,255,0.2);
+padding: 5px 10px;
+border-radius: 5px;
+}
+
+/* Search */
+.search-box {
+padding: 15px;
+text-align: center;
+}
+
+.search-box input {
+width: 60%;
+padding: 12px;
+font-size: 16px;
+border-radius: 8px;
+border: 1px solid #ccc;
+outline: none;
+}
+
+.search-box input:focus {
+border-color: #3498db;
+}
+
+/* Product Grid */
+.product-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+padding: 20px;
+}
+
+/* Product Card */
+.card {
+border: 1px solid #ddd;
+padding: 15px;
+text-align: center;
+border-radius: 10px;
+background: #fff;
+transition: transform 0.2s, box-shadow 0.2s;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.card:hover {
+transform: scale(1.03);
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card img {
+width: 100%;
+height: 150px;
+object-fit: contain;
+margin-bottom: 10px;
+}
+
+.card h3 {
+font-size: 15px;
+min-height: 40px;
+}
+
+/* Button */
+.card button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.card-content {
+    flex-grow: 1;
+}
+
+.card button:hover {
+background-color: #2980b9;
+}
+
+.cart-section {
+    padding: 20px;
+    background: #f8fbfb;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+
+.cart-item button {
+    background: rgb(183, 59, 59);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.qty {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+#total-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #2c3e50;
+}
+
+#searchInput {
+    border: 2px solid #3498db;
+    outline: none;
+}
