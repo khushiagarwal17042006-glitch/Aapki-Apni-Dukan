@@ -177,3 +177,7 @@ background-color: #2980b9;
     color: #555;
     margin-top: 20px;
 }
+#product-container {
+    text-align: center;
+    font-size: 18px;
+}
