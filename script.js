@@ -34,7 +34,7 @@ function showProducts(products) {
                 <p>${product.category}</p>
             </div>
 
-            <button onclick="addToCart(${product.id})">Add to Cart</button>
+            <button onclick="addToCart(${product.id},this)">Add to Cart</button>
         `;
 
         container.appendChild(card);
@@ -42,7 +42,7 @@ function showProducts(products) {
 }
 // Call the function
 getProducts();
-function addToCart(id) {
+function addToCart(id, btn) {
     let product = productList.find(item => item.id === id);
 
     let existing = cart.find(item => item.id === id);
@@ -53,6 +53,14 @@ function addToCart(id) {
         product.quantity = 1;
         cart.push(product);
     }
+
+    btn.innerText = "Added!";
+    btn.disabled = true;
+
+    setTimeout(() => {
+        btn.innerText = "Add to Cart";
+        btn.disabled = false;
+    }, 1000);
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
@@ -72,10 +80,21 @@ function updateCartCount() {
 updateCartCount();
 
 function showCart() {
+
     let container = document.getElementById("cart-items");
     let total = 0;
     container.innerHTML = "";
 
+    if (cart.length === 0) {
+        container.innerHTML = `
+    <div class="empty-cart">
+        <h3>Your cart feels lonely 🛒</h3>
+        <p>Add some products to make it happy!</p>
+    </div>
+`;
+        document.getElementById("total-price").innerText = "Total: $0";
+        return;
+    }
     cart.forEach((item, index) => {
         total += item.price * item.quantity;
 
