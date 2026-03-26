@@ -15,6 +15,10 @@ async function getProducts() {
 function showProducts(products) {
     let container = document.getElementById("product-container");
     container.innerHTML = "";
+    if (products.length === 0) {
+        container.innerHTML = "<p>No products found</p>";
+        return;
+    }
 
     products.forEach(product => {
         let card = document.createElement("div");
