@@ -31,7 +31,7 @@ function showProducts(products) {
                 <img src="${product.image}" />
                 <h3>${product.title}</h3>
                 <p><b>$${product.price}</b></p>
-                <p>${product.category}</p>
+                <p class="category">${product.category}</p>
             </div>
 
             <button onclick="addToCart(${product.id},this)">Add to Cart</button>
@@ -133,6 +133,13 @@ searchInput.addEventListener("input", function () {
 
     showProducts(filteredProducts);
 });
+
+document.getElementById("topBtn").onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
 
 updateCartCount();
 showCart();
