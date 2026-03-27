@@ -4,7 +4,7 @@ font-family: Arial, sans-serif;
 background-color: #f5f5f5;
 }
 
-/* Header */
+
 .header {
 display: flex;
 justify-content: space-between;
@@ -20,7 +20,6 @@ h1 {
 margin: 0;
 }
 
-/* Heading styles */
 .hindi {
 font-family:cursive;
 color: #f1b708;
@@ -37,7 +36,6 @@ font-size: 25px;
 margin: 0 5px;
 }
 
-/* Cart */
 .cart {
 font-size: 18px;
 background: rgba(255,255,255,0.2);
@@ -45,7 +43,6 @@ padding: 5px 10px;
 border-radius: 5px;
 }
 
-/* Search */
 .search-box {
 padding: 15px;
 text-align: center;
@@ -64,7 +61,7 @@ outline: none;
 border-color: #3498db;
 }
 
-/* Product Grid */
+
 .product-container {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -72,7 +69,7 @@ gap: 20px;
 padding: 20px;
 }
 
-/* Product Card */
+
 .card {
 border: 1px solid #ddd;
 padding: 15px;
@@ -102,7 +99,7 @@ font-size: 15px;
 min-height: 40px;
 }
 
-/* Button */
+
 .card button {
     background: #3498db;
     color: white;
@@ -217,9 +214,9 @@ transform: scale(1.05);
     color: white;
     
     border: none;
-    border-radius: 8px; /* not circle anymore */
+    border-radius: 8px; 
     
-    font-size: 22px; /* bigger arrow */
+    font-size: 22px; 
     font-weight: bold;
     
     cursor: pointer;
@@ -227,4 +224,18 @@ transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     
     transition: all 0.3s ease;
+}
+
+.sort-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#sortSelect {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    cursor: pointer;
 }

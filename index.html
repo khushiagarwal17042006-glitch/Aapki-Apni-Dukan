@@ -25,7 +25,13 @@
 <div class="search-box">
     <input type="text" id="searchInput" placeholder="Search products...">
 </div>
-
+<div class="sort-container">
+    <select id="sortSelect">
+        <option value="">Sort By</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+    </select>
+</div>
 <div class="cart-section">
     <h2>Your Cart</h2>
     <div id="cart-items"></div>
@@ -33,9 +39,7 @@
 </div>
 <!-- Product Section -->
 <div id="product-container" class="product-container">
-    <!-- Products will come here later -->
 </div>
-
 
 <button id="topBtn">↑</button>
 <script src="script.js"></script>

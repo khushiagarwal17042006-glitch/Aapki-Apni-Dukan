@@ -40,7 +40,7 @@ function showProducts(products) {
         container.appendChild(card);
     });
 }
-// Call the function
+
 getProducts();
 function addToCart(id, btn) {
     let product = productList.find(item => item.id === id);
@@ -140,6 +140,20 @@ document.getElementById("topBtn").onclick = function () {
         behavior: "smooth"
     });
 };
+
+document.getElementById("sortSelect").addEventListener("change", function () {
+    let value = this.value;
+
+    let sorted = [...productList];
+
+    if (value === "low") {
+        sorted.sort((a, b) => a.price - b.price);
+    } else if (value === "high") {
+        sorted.sort((a, b) => b.price - a.price);
+    }
+
+    showProducts(sorted);
+});
 
 updateCartCount();
 showCart();
