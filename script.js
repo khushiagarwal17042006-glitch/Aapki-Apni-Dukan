@@ -1,3 +1,4 @@
+console.log("NEW CODE LOADED");
 let productList = [];
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 // Fetch products from API
