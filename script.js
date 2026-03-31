@@ -5,7 +5,7 @@ async function getProducts() {
     try {
         let container = document.getElementById("product-container");
         container.innerHTML = "Loading products...";
-        let response = await fetch("https://fakestoreapi.com/products");
+        let response = await fetch("https://corsproxy.io/?https://fakestoreapi.com/products");
         let data = await response.json();
         productList = data;
         showProducts(productList);
