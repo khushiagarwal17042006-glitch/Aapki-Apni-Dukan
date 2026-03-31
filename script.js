@@ -6,9 +6,10 @@ async function getProducts() {
     try {
         let container = document.getElementById("product-container");
         container.innerHTML = "Loading products...";
-        let response = await fetch("https://corsproxy.io/?https://fakestoreapi.com/products");
-        let data = await response.json();
-        productList = data;
+        let response = await fetch("https://dummyjson.com/products");
+let data = await response.json();
+
+productList = data.products;
         showProducts(productList);
     } catch (error) {
         console.log("Error fetching data:", error);
@@ -29,7 +30,7 @@ function showProducts(products) {
 
         card.innerHTML = `
             <div class="card-content">
-                <img src="${product.image}" />
+                <img src="${product.thumbnail}" />
                 <h3>${product.title}</h3>
                 <p><b>$${product.price}</b></p>
                 <p class="category">${product.category}</p>
